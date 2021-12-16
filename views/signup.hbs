@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/signup.css">
+    
+    <title>Insert User</title>
+</head>
+<body>
+    <div class="login-page">
+  <div class="form">
+    <form class="reg-form" method="POST" action="/insert" enctype="multipart/form-data">
+      <input type="text" placeholder="Fullname" name="user_name" required="true"/>
+      <input type="email" placeholder="Email" name="user_email" required="true"/>
+      <input type="password" placeholder="password" name="user_password" required="true"/>
+      <input type="number" placeholder="Number of orders" name="total_orders" min="0" required="true"/>
+      <label for="image"><b>Upload Profile Image</b></label>
+      <input id="image" type="file" name="user_image" accept="image/png, image/gif, image/jpeg" required="true">
+      <button>Register</button>
+     
+    </form>
+  </div>
+</div>
+<script>
+    $('.message a').click(function(){
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+</script>
+</body>
+</html>
